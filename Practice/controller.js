@@ -4,16 +4,12 @@ angular.module('myApp', [])
         $scope.myFunc = function(){
             var auth = window.btoa($scope.userName + ':' + $scope.lastName), headers = {"Authorization": "Basic " + auth};
             $http.get("http://34.200.170.137/abcblock/login", {headers: headers}).then(function (response) {
-                if (response.status === 200)
-                {
-                    $scope.ctObject = response.data;
+                $scope.ctObject = response.data;
 
-                    $scope.my_variable = $scope.ctObject.first_name + ' ' + $scope.ctObject.last_name;
-                }
-                else
-                {
-                    $scope.my_variable = "YOU FREAKING SUCK BRO";
-                }
+                $scope.my_variable = $scope.ctObject.first_name + ' ' + $scope.ctObject.last_name;
+            }, function (response)
+            {
+                $scope.my_variable = "YOU FREAKING SUCK BRO";
             });
         }
     }]);
