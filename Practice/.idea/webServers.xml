@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ad19e240-56d1-45b4-a3d6-9bb5df81d334" name="Public Capstone Server" url="http://34.200.170.137">
+        <fileTransfer host="34.200.170.137" port="22" privateKey="C:\Users\Edem\Downloads\Capstone_Key_Pair.pem" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

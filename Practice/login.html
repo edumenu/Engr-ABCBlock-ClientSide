@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="background.css" rel="stylesheet" />
+    <script src="controller.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <header> <img src="ABC.png" alt="BB"> </header>
+<div ng-app="myApp" ng-controller="myCtrl">
+      <!--<div class="form-inline">
+    <div class="form-group">
+      <label class="sr-only" for="username">Username:</label>
+      <input type="text" autoGrow class="form-control" id="username" ng-model="username"><br>
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Password">
+    </div><BR />
+    <Br />
+    <Br />
+    <div class="btn-toolbar">
+     <button type="button" class="btn-default btn-lg" ng-click="submit()">Login</button>
+     <button type="button" class="btn-default btn-lg">Create User</button>
+      </div>
+      <BR />
+  </div> -->
+    <div class="form-inline">
+    <div class="form-group">
+    <input type="text" autoGrow class="form-control" ng-model="userName">
+    <input type="password" autoGrow class="form-control" ng-model="lastName"><br>
+    <button ng-click="myFunc()">Login</button>
+    <br>
+    </div>
+    Full Name: {{my_variable}}
+</div>
+</div>
+</div>
+
+</body>
+</html>
