@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="background3.css" rel="stylesheet" />
+    <script src="controller.js"></script>
+    <script src="controller2.js"></script>
+</head>
+<body ng-app="myApp2">
+
+<div id="container">
+    <div class="panel-body">ABC Block</div>
+    <img src="icon.jpg" class="img-responsive" alt="Cinque Terre">
+    <div ng-controller="myCtrl2" text="text" ng-model="message">
+        <h2>{{message}}</h2>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+
+            <h4>Patient List</h4>
+            <br>
+            <div ng-controller="myCtrl3">
+                <ul class="nav nav-pills nav-stacked">
+                    <h1 ng-repeat="P in records">{{P.first_name}} {{P.last_name}}</h1>
+                </ul><br>
+            </div>
+
+        </div>
+
+        <div id="responsive" ng-controller="myCtrl4">
+            <!--Left media-->
+            <h3>Patient: Sarah Smith</h3><br>
+            <h3>Left Tablet Media</h3>
+            <table class="table table-responsive table-bordered">
+            <thead>
+            <tr>
+                <th>Name of media type</th>
+                <th>Media Type</th>
+                <th>Date / Time</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="P in records1">
+                <td>{{P.name}}</td>
+                <td>{{P.type}}</td>
+                <td>{{P.date_time | date : 'MMM d, y hh:mm:ss a':'0'}}</td>
+            </tr>
+            </tbody>
+            </table>
+
+            <div id="responsive1" ng-controller="myCtrl5">
+                <!-- Left session_data -->
+                <h3>Left Tablet Session data</h3>
+                <table class="table table-responsive table-bordered">
+                    <thead>
+                    <!--<tr>
+                        <th>ID</th>
+                        <th>Number of clicks </th>
+                        <th>Total time</th>
+                    </tr>-->
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="(key,value) in records">
+                        <td>{{key}}: {{value}}</td>
+                        <!--<td>{{P.num_clicks}}</td>
+                        <td>{{P.total_time}}</td>-->
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div id="responsive2" ng-controller="myCtrl6">
+                <h3>Right Tablet Media</h3>
+                <table class="table table-responsive table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Name of media type</th>
+                        <th>Media Type</th>
+                        <th>Date / Time</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="P in records1">
+                        <td>{{P.name}}</td>
+                        <td>{{P.type}}</td>
+                        <td>{{P.date_time | date : 'MMM d, y hh:mm:ss a':'0'}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                    <div id="responsive3" ng-controller="myCtrl7">
+                    <!-- Right session_data -->
+                    <h3>Right Tablet Session data</h3>
+                    <table class="table table-responsive table-bordered">
+                        <thead>
+                        <!--<tr>
+                            <th>ID</th>
+                            <th>Number of clicks </th>
+                            <th>Total time</th>
+                        </tr>-->
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="(key,value) in records">
+                            <td>{{key}}: {{value}}</td>
+                            <!--<td>{{P.num_clicks}}</td>
+                            <td>{{P.total_time}}</td>-->
+                        </tr>
+                        </tbody>
+                    </table>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

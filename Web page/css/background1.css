@@ -1,0 +1,41 @@
+body
+{
+    background-color: #fe0000;
+}
+
+#container {
+    margin-left: 700px;
+    width: 920px;
+    height: 850px;
+}
+
+
+.btn-toolbar
+{
+    margin-left: 70px;
+}
+
+.form-group
+{
+    margin-top: 20px;
+    margin-right: 900px;
+    width: 400px;
+    height: 500px;
+}
+
+
+img {
+
+    height: 300px;
+    width: 300px;
+    margin-left: 25px;
+    margin-top: 50px;
+}
+
+.lead{
+    align: center;
+    color: blue;
+    font-size: 40px;
+    margin-left: 100px;
+    margin-top: 20px
+}
