@@ -17,6 +17,7 @@ app.controller('myCtrl', ['$scope', '$http', function($scope, $http,$window) {
 }])
 
 
+
 app.controller('myCtrl1', ['$scope', '$http', function($scope, $http) {
     $scope.myFunc1 = function(){
         var ctObject = ({
