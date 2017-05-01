@@ -1,15 +1,22 @@
+<!--Author: Edem Dumenu
+Creation: 03-02-2017
+Development Team: Edem Dumenu, Luke Clark, Sam Justice
+Description: This activity displays the create new user page
+It receives the User's credentials and passes that information to the server to create a new user-->
+
 <!DOCTYPE html>
 <form lang="en">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <head>
+        <!-- Libraries -->
         <meta charset="UTF-8">
-        <title>New User</title>
+        <title>Create New User</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link href="background1.css" rel="stylesheet" />
-        <script src="controller.js"></script>
+        <link href="../css/background1.css" rel="stylesheet" />
+        <script src="../home/controller.js"></script>
         <script src="angular(.min).js"></script>
         <script src="ng-file-upload(.min).js"></script>
     </head>
@@ -17,12 +24,13 @@
 
 <body ng-app="myApp">
 <div id="container">
-    <header> <img src="ABC.png" alt="BB" width="304" height="300"> </header>
+    <header> <img src="../assets/ABC.png" alt="ABC" width="304" height="300"> </header>
     <div ng-controller="myCtrl1">
-        <!-- Login form -->
+        <!-- New user form -->
         <form class="form-horizontal">
             <div class="form-group form-group-lg">
                 <div class="input-group">
+                    <!-- Retrieve a new user's first and last name, userName and password  -->
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                     <input class="form-control" type="text" class="form-control" ng-model="firstName" placeholder="First Name">
                 </div>
@@ -43,23 +51,19 @@
                 </div>
                 <br><br>
                 <div class="btn-toolbar">
+                    <!-- This button executes myFunc1 in the "myCtrl1" controller -->
                     <button type="button" class="btn-default btn-lg" ng-click="myFunc1()">Create New User</button>
-                    <button type="button" class="btn-default btn-lg" onclick="window.location='login.html'">Cancel</button>
+                    <button type="button" class="btn-default btn-lg" onclick="window.location='../index.html'">Cancel</button>
                     <br>
                 </div>
                 <br>
+                <!-- Displaying an error message when there is an invalid input -->
                 <p class="lead">
                     {{my_variable1}}
                 </p>
             </div>
         </form>
     </div>
-    <form ng-app="fileUpload" ng-controller="MyCtrl" name="form">
-        <!--Single Image with validations-->
-        <div class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
-             ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
-             ngf-resize="{width: 100, height: 100}">Select</div>
-    </form>
 </div>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!--Author: Edem Dumenu
+Creation: 03-02-2017
+Development Team: Edem Dumenu, Luke Clark, Sam Justice
+Description: This activity displays the list of patients associated with the CT.
+This gives the CT a chance to select a patient to view his or her statistics-->
+
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Profile List Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../css/background3.css" rel="stylesheet" />
+    <script src="../home/controller.js"></script>
+    <script src="../home/controller2.js"></script>
+</head>
+<body ng-app="myApp2">
+
+<div id="container">
+    <div class="panel-body">ABC Block</div>
+    <div ng-controller="myCtrl2" text="text" ng-model="message">
+        <h2>{{message}}</h2>
+    </div>
+</div>
+
+<div ng-controller="patientList">
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+
+            <h4>Patient List</h4>
+            <br>
+                <ul class="nav nav-pills nav-stacked">
+                    <!-- This prints out the list of patients retrieved from the patientList controller -->
+                    <li><a ng-repeat="item in items" ng-click="removeID(item.id)" >{{item.first_name}} {{item.last_name}}</a></li>
+                </ul>
+
+        </div>
+        <!-- This the iframe on the web page which will open another web page for example the "statisticsPage.html" page will be opened -->
+        <iframe bored="1" width="1170" height="900" ng-src="{{detailFrame}}"></iframe>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

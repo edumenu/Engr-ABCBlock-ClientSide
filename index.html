@@ -1,0 +1,48 @@
+<!--Author: Edem Dumenu
+Creation: 03-02-2017
+Development Team: Edem Dumenu, Luke Clark, Sam Justice
+Description: This activity facilitates the both the login page and the create user page
+It receives the User's credentials and passes that information to the server for authentication-->
+
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+    <!-- Libraries -->
+    <meta charset="utf-8">
+    <title>Login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/background.css" rel="stylesheet" />
+    <script src="home/controller.js"></script>
+    <script src="home/controller2.js"></script>
+</head>
+<body ng-app="myApp">
+
+<div id="container">
+    <header> <img src="assets/ABC.png" alt=ABC> </header>
+    <div ng-controller="myCtrl">
+        <div class="form-inline">
+            <div class="form-group">
+                <!-- Retrieving the user's first name and last name -->
+                <input type="text" autoGrow class="form-control" ng-model="firstName">
+                <input type="text" autoGrow class="form-control" ng-model="lastName"><br><br>
+                <div class="btn-toolbar">
+                    <!-- Executing the "myFunc" which is being called in the "myCtrl" controller -->
+                    <button type="button" class="btn-default btn-lg" ng-click="myFunc()">Login</button>
+                    <!-- Selecting this button opens the "Newuser.html" page -->
+                    <button type="button" class="btn-default btn-lg" onclick="window.location='root/Newuser.html'">Create User</button>
+                </div>
+                <!-- Displaying an error message when there is an invalid input -->
+                <p class="lead">
+                    {{variable}}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
